@@ -44,7 +44,7 @@ conda activate domain_crossKD
 ```shell
 pip install -r requirements.txt --upgrade
 ```
-**Step 3.** Training or Testing 
+**Step 3.** Training or Testing Domain Transfer
 ```shell
 python3 domain_transfer/scripts/train.py
     --D_netDs projected_d basic\
@@ -92,7 +92,9 @@ python3 domain_transfer/scripts/train.py
     --with_amp
 python3 domain_transfer/scripts/test.py
 ```
-
+**Step 4.** Training or Testing Knowledge Distillation
+```shell
+```
 
 ## Results
 | **Method**         | Source   | Target   | All      |
