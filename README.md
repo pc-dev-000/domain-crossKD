@@ -23,8 +23,29 @@ Producing large, fully annotated datasets for object detection is highly expensi
 
 - Ubuntu >= 16.04
 - CUDA >= 11.3
+- cuDNN (correspond to CUDA version)
 - pytorch==2.4.0
 - torchvision=0.19.0
+- CMake >= 3.18
+- OpenCV >= 4.0
+
+### 2. Installation
+**Step 0.** Clone this Repository
+```shell
+git clone https://github.com/peterchondro/domain-crossKD.git
+cd domain-crossKD
+```
+**Step 1.** Create Conda Environment
+```shell
+conda create --name domain_crossKD python=3.7 -y
+conda activate domain_crossKD
+```
+**Step 2.** Install Dependencies 
+```shell
+pip install -r requirements.txt --upgrade
+```
+
+
 
 ## Results
 | **Method**         | Source   | Target   | All      |
