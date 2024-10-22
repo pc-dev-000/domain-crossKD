@@ -41,6 +41,39 @@ conda activate domain_crossKD
 **Step 2.** Install Dependencies 
 ```shell
 pip install -r requirements.txt --upgrade
+sudo apt install nvidia-utils-530
+sudo snap install cmake --classic
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
+sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/12.1.1/local_installers/cuda-repo-ubuntu2204-12-1-local_12.1.1-530.30.02-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu2204-12-1-local_12.1.1-530.30.02-1_amd64.deb
+sudo cp /var/cuda-repo-ubuntu2204-12-1-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install cuda
+export PATH=/usr/local/cuda-12.1/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-tar
+sudo apt update && sudo apt install -y cmake g++ wget unzip
+sudo apt-get install python3-opencv
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
+wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.x.zip 
+unzip opencv.zip
+unzip opencv_contrib.zip
+mkdir -p build && cd build
+cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.x/modules ../opencv-4.x -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D WITH_CUDA=ON \
+      -D ENABLE_FAST_MATH=1 \
+      -D CUDA_FAST_MATH=1 \
+      -D WITH_CUBLAS=1 \
+      -D OPENCV_GENERATE_PKGCONFIG=ON \
+      ..
+cmake --build . 
+sudo make install
+sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
+sudo ldconfig
+sudo apt-get install python3-pip
+pip install PyQt5 xlrd xlwt xlutils matplotlib
 ```
 **Step 3.** Training or Testing Domain Transfer
 ```shell
@@ -91,7 +124,12 @@ python3 domain_transfer/scripts/train.py
 python3 domain_transfer/scripts/test.py
 ```
 **Step 4.** Training or Testing Knowledge Distillation
-```shell
+```
+cd knowledge_distillation/build_release
+cmake ..
+cmake --build . --target install --parallel 8
+cd knowledge_distillation
+bash INFERENCE.SH
 ```
 
 **Sample Models**
