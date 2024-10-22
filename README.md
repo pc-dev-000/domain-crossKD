@@ -11,7 +11,7 @@ This repository contains the official implementation of the following paper:
 
 Producing large, fully annotated datasets for object detection is highly expensive. In this paper, we propose a framework that integrates GANs and Knowledge Distillation to efficiently train object detectors using minimally annotated data. With a fully annotated source domain, 20% annotated target domain, and a large non-annotated target domain, the method employs GANs to generate synthetic target domain images and uses a teacher model to create pseudo-labels. Training the object detector with both detection and distillation losses resulted in a mean average precision (mAP) of 60.2% on the target domain, outperforming the 20% annotation baseline (51.8%) and closely matching the fully annotated baseline (62.8%).
 
-![struture](assets/flow_diagram.png)
+![structure](assets/flow_diagram.png)
 
 ## Get Started
 
@@ -95,7 +95,7 @@ python3 domain_transfer/scripts/test.py
 ```
 
 **Sample Models**
-Download [Here](https://drive.google.com/drive/folders/1VNZCUq9cxMkKZEaubxYUX6tjq7uHgna5?usp=sharing)
+[Download Here](https://drive.google.com/drive/folders/1VNZCUq9cxMkKZEaubxYUX6tjq7uHgna5?usp=sharing)
 
 
 ## Results
@@ -109,10 +109,10 @@ Download [Here](https://drive.google.com/drive/folders/1VNZCUq9cxMkKZEaubxYUX6tj
 | **CrossKD**        | 54.9%    | 60.5%    | 57.7%    |
 | **Proposed**       | 56.7%    | 63.7%    | 60.2%    |
 
-![struture](assets/demo_bdd.png)
+![structure](assets/demo_bdd.png)
 Sample Results for Berkeley Drive Dataset
 
-![struture](assets/demo_idd.png)
+![structure](assets/demo_idd.png)
 Sample Results for India Drive Dataset
 
 ## Citation
