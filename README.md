@@ -95,8 +95,8 @@ python3 domain_transfer/scripts/test.py
 ```
 
 **Sample Models**
-```Download Here (https://drive.google.com/drive/folders/1VNZCUq9cxMkKZEaubxYUX6tjq7uHgna5?usp=sharing)
-```
+Download [Here](https://drive.google.com/drive/folders/1VNZCUq9cxMkKZEaubxYUX6tjq7uHgna5?usp=sharing)
+
 
 ## Results
 | **Method**         | Source   | Target   | All      |
