@@ -4,9 +4,6 @@
 
 This repository contains the official implementation of the following paper:
 > **Distilling GANs and Teacher Model for an Enhanced Semi-Supervised Object Detection**<br>
-> [Peter Chondro](https://scholar.google.co.uk/citations?hl=en&user=S9ErhhEAAAAJ)<sup>\*</sup> and [Jun-Ming Lu]  <br>
-> *Independent, Industrial Technology Research Institute <br>
-
 [[TechRxiv Paper](https://doi.org/10.36227/techrxiv.172954097.77246383/v1)]
 
 ## Introduction
