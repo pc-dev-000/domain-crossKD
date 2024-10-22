@@ -7,7 +7,7 @@ This repository contains the official implementation of the following paper:
 > [Peter Chondro](https://scholar.google.co.uk/citations?hl=en&user=S9ErhhEAAAAJ)<sup>\*</sup> and [Jun-Ming Lu]  <br>
 > *Independent, Industrial Technology Research Institute <br>
 
-[[Arxiv Paper](https://www.overleaf.com/project/6699dbef4e03d9be5ba1553f)]
+[[TechRxiv Paper](https://doi.org/10.36227/techrxiv.172954097.77246383/v1)]
 
 ## Introduction
 
