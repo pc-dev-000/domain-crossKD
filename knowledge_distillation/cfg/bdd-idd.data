@@ -1,0 +1,6 @@
+classes= 4
+train  = data/experiment_241206/train.txt
+valid  = data/experiment_241206/val.txt
+names = cfg/bdd-idd.names
+backup = drn-544x352/experiment_241206/Snapshots
+
